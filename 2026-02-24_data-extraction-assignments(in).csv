@@ -1,0 +1,90 @@
+itemkey;title;author;year;assignee
+K5YBJ5M2;Enhancing robotic grasp failure prediction using a pre-hoc explainability framework;"C. Acun; A. Ashary; D.O. Popa; O. Nasraoui";2024;Moritz
+JDWACEKN;Distilling reinforcement learning policies for interpretable robot locomotion: gradient boosting machines and symbolic regression;"F. Acero; Z. Li";2024;Tobias
+5CTQC6HN;Developing interpretable machine learning for forward kinematics of robotic arms;"S.T. Kanneganti; J.-S. Pei; D.F. Hougen";2021;Tobias
+IRLI3G9N;Comparison of explainability approaches for reinforcement learning for autonomous flight maneuvers;"S. Kar; M.K. Banavar; S. Dey; A. Salihovic; S. Khan; J.R. Bryant; M.B. Matthews";2024;Tobias
+WD7JLAMB;Measuring interpretability of neural policies of robots with disentangled representation;"T.-H. Wang; W. Xiao; T. Seyde; R. Hasani; D. Rus";2023;Tobias
+4K6NZE25;An Interpretable Monitoring Framework for Virtual Physics-Based Non-Interfering Robot Social Planning;"R. Peddi; N. Bezzo";2022;Amar
+2CA44YNV;RE:BT-espresso: improving interpretability and expressivity of behavior trees learned from robot demonstrations;"A. Wathieu; T.R. Groechel; H.J. Lee; C. Kuo; M.J. Mataríc";2022;Andreas
+ANIQULLZ;Quantum computing and neuromorphic computing for safe, reliable, and explainable multi-agent reinforcement learning: optimal control in autonomous robotics;"M. Taghavi; R. Farnoosh";2025;Andreas
+LFDJZ8LU;Growable and interpretable neural control with online continual learning for autonomous lifelong locomotion learning machines;"A. Srisuchinnawong; P. Manoonpong";2025;Tobias
+NNZH8T5S;Interpretable Ordinal-Aware With Contrastive-Enhanced Anomaly Severity Detection on UAV Flight Log Messages;"S. Silalahi; T. Ahmad; H. Studiawan; E. Anthi; L. Williams";2025;Amar
+DJ53NPPG;An explainable and fair hierarchical RL-based alternative trajectory proposal framework for autonomous U-plan approval in U-space;"S.E. Roghani; E. Koyuncu";2025;Amar
+ML9SYPYJ;Explainable reinforcement learning for trajectory design in UAV-assisted wireless networks;"A. Krayani; K. Khan; L. Marcenaro; C. Regazzoni";2025;Andreas
+3UCSHXYH;Improving HRI Through Robot Architecture Transparency;"L. Hindemith; C.B. Wiebel-Herboth; H. Wersing; B. Wrede; A.-L. Vollmer";2025;Moritz
+D2DZAIXP;Integrating Belief-Desire-Intention agents with large language models for reliable human–robot interaction and explainable Artificial Intelligence;"L. Frering; G. Steinbauer-Wagner; A. Holzinger";2025;Moritz
+RDC6P8JB;Towards trustworthy and explainable socially assistive robots: a cognitive architecture for dietary guidance;"L. D’Arco; L. Raggioli; G. Randazzo; G. De Gasperis; A. Chella; S. Costantini; S. Rossi; I. Infantino; V. Seidita";2025;Moritz
+7EQMTRS5;A multi-modal explainability approach for human-aware robots in multi-party conversation;"Iveta Bečková; Stefan Pócos; G. Belgiovine; Marco Matarese; O. Eldardeer; A. Sciutti; Carlo Mazzola";2025;Amar
+T8GH8CT9;Optimizing Local Explainability in Robotic Grasp Failure Prediction;"C. Acun; A. Ashary; D.O. Popa; O. Nasraoui";2025;Andreas
+8XFR5LPQ;Supporting explainable planning and human-aware mission specification for underwater robots;"A. Lindsay; A.A. Ramirez-Duque; B. Craenen; A. Munafo; L. Boé; A. Campbell; R.P.A. Petrick; M.N. Huda; M. Wang; T. Kalganova";2025;Moritz
+NW8A9XC5;Towards providing explanations for robot motion planning;"M. Brandão; Gerard Canal; Senka Krivic; D. Magazzeni";2021;Amar
+8DZ6PNVQ;Explainable AI for robot failures: Generating explanations that improve user assistance in fault recovery;"Devleena Das; Siddhartha Banerjee; S. Chernova";2021;Amar
+INIMDV75;A curriculum-guided and explainable reinforcement learning framework for fixed-wing unmanned aerial vehicle autopilots;"Y. Lian; N. Li; P. Zhou; R. Hu; C. Dong";2026;Andreas
+VPXS3RJR;Effect of efficiently computed explanations for robot motion planning failures in human–robot interaction;"M. Eder; B. Kubicek; G. Steinbauer-Wagner";2026;Moritz
+Y7DUD2MK;Interpretable attention-based prototype network for UAV fault diagnosis under small sample conditions;"S. Liang; J. Yu; D. Tang; X. Ke";2026;Andreas
+YP7LB5NH;Beyond performance: Explaining generalisation failures of Robotic Foundation Models in industrial simulation;"D. Kube; S. Hadwiger; T. Meisen";2025;Moritz
+ECNJ7ST7;XAIgent: A Multi-Agentic Design Method for Explainable Human-Robot Interaction in Scientific Discovery;"R. Somarathna; M. Perera; M. Xi; A. Krumpholz; M. Adcock";2025;Moritz
+L9FN44UX;Personalised Explanations in Long-term Human-Robot Interactions;"F. Gebellí; A. Garrell; J.-G. Habekost; S. Lemaignan; S. Wermter; R. Ros";2025;Moritz
+LSM5Q8IZ;Robot Arms Too Short? Explaining Motion Planning Failures using Design Optimization;"W. Wu; M. Brandão";2025;Amar
+KVHPBABP;Immersive Explainability: Visualizing Robot Navigation Decisions through XAI Semantic Scene Projections in Virtual Reality;"J. de Heuvel; S. Muller; M. Wessels; A. Akhtar; C. Bauckhage; M. Bennewitz";2025;Moritz
+9BFGZQSZ;Accessible and Pedagogically-Grounded Explainability for Human-Robot Interaction: A Framework Based on UDL and Symbolic Interfaces;"F.J.R. Lera; R.F. Hernandez; S. Lopez González; M.A. González-Santamarta; F.J.R. Sedano; C.F. Fernandez-Llamas";2025;Moritz
+MSCLRCYF;Effective Explanations for Belief-Desire-Intention Robots: When and What to Explain;"C. Wang; R. Calandra; V. Klös";2025;Moritz
+376MT58G;Robot Delivery of Actionable Counterfactual Neural Network Explanations: Results in Group Perception;"A. Narcomey; H. Claure; M. Vázquez";2025;Tobias
+GEAZVDJN;Transparent Social Navigation for Autonomous Mobile Robots Via Vision-Language Models;"O. Sotomi; D. Kodi; A. Arab";2025;Moritz
+VHRDRRT3;INTERPRETABLE DEEP REINFORCEMENT LEARNING FOR AUTONOMOUS SYSTEMS: INTEGRATING CAUSAL INFERENCE WITH POLICY GRADIENTS;"A.F. Mahdi; B.M. Abed";2025;Tobias
+7PDW34DR;Towards Transparent Multi-Agent Autonomous Systems Through Principled Multi-Source Knowledge Distillation;"Z.-Z. Guo; C.-R. Wang; X.-Z. Zhu; C.-J. Wu; B.-S. Deng; W. Yao";2025;Moritz
+CG7GGI82;GRACE: Generating Socially Appropriate Robot Actions Leveraging LLMs and Human Explanations;"F.I. Dogan; U. Ozyurt; G. Cinar; H. Gunes";2025;Moritz
+YV5XVI3N;Affordance-Based Explanations of Robot Navigation;"A. Halilović; S. Krivić";2025;Amar
+2DBEW6N5;Generating Natural Language Explanations for LMM-Driven Robot Behavior;"J. Jarsania; M. Singh; H. Fnu";2025;Moritz
+S3VKK4ZB;Explainability in collaborative robotics: the effect of informing the user on task performance and trust;"M. Adamik; A.P. Madsen; M. Rehm";2022;Amar
+78REPEX5;Explainable artificial intelligence for autonomous UAV navigation;"D. Dissanayaka; T.R. Wanasinghe; R.G. Gosine";2024;Andreas
+N4DA6Y7B;Explainable hybrid CNN and FNN approach applied on robotic wall-following behaviour learning;"J. Kwiatkowski; L. Ou; Y.-C. Chang; C.-T. Lin";2021;Tobias
+CSQ34Q94;Explainable knowledge graph embedding: inference reconciliation for knowledge inferences supporting robot actions;"A. Daruna; D. Das; S. Chernova";2022;Andreas
+69M7L3MM;Explainable reinforcement learning for human-robot collaboration;"A. Iucci; A. Hata; A. Terra; R. Inam; I. Leite";2021;Andreas
+VQU5KRBE;Explainable reinforcement learning in human-robot teams: the impact of decision-tree explanations on transparency;"D.V. Pynadath; N. Gurney; N. Wang";2022;Andreas
+NZWR3ATY;Explaining graph-based decision learning for autonomous exploration in unknown environments;"L. Chen; S. Duan; C. Xu; H. Zhang; R. Wang";2024;Andreas
+54Q9Q89E;Explaining the decisions of deep policy networks for robotic manipulations;"S. Kim; J. Choi";2021;Tobias
+JZZ87H7R;Gaussian process-based interpretable runtime adaptation for safe autonomous systems operations in unstructured environments;"C. Gall; N. Bezzo";2021;Andreas
+EYR63EB7;HMI design for explainable machine learning enhanced risk detection in low-altitude UAV operations;"M. Friedrich; J. Kuls; M. Findeisen; N. Peinecke";2023;Moritz
+QDVPCRZD;Interpretable run-time prediction and planning in Co-robotic environments;"R. Peddi; N. Bezzo";2021;Moritz
+S5XL8MRP;MAPS-X: explainable multi-robot motion planning via segmentation;"J. Kottinger; S. Almagor; M. Lahijanian";2021;Moritz
+6UGPGZPP;Robot explanatory narratives of collaborative and adaptive experiences;"A. Olivares-Alarcos; A. Andriella; S. Foix; G. Alenyà";2023;Andreas
+ABK72RJG;The influence of a robot's personality on real-time explanations of its navigation;"Amar Halilovic; Senka Krivic";2023;Amar
+B842X44I;Towards explainable proactive robot interactions for groups of people in unstructured environments;"T. Love; A. Andriella; G. Alenyà";2024;Moritz
+6V4UHZ92;UnderstAndreasng a robot's guiding ethical principles via automatically generated explanations;"B. Krarup; F. Lindner; S. Krivić; D. Long";2022;Amar
+JKPF5RC9;Using platform models for a guided explanatory diagnosis generation for mobile robots;"D. Habering; T. Hofmann; G. Lakemeyer; Z.-H. Zhou";2021;Amar
+YSLK2GZU;Using shapley additive explanations to explain a deep reinforcement learning agent controlling a Turtlebot3 for autonomous navigation;"S.B. Remman; A.M. Lekkas; G. Gini; R.-E. Precup; D. Filev";2024;Andreas
+KR7S5PCM;Vision-based ascending staircase detection with interpretable classification model for stair climbing robots;"K. Lee; V. Kalyanram; C. Zhengl; S. Sane; K. Lee";2022;Amar
+W8RQSWYJ;Why did my robot choose this path? Explainable path planning for off-road navigation;"Matthias Eder; Gerald Steinbauer-Wagner";2024;Amar
+N2DA3YF2;Integrated Commonsense Reasoning and Deep Learning for Transparent Decision Making in Robotics;"T. Mota; M. Sridharan; A. Leonardis";2021;Amar
+WJ4N4L8G;Multimodal coherent explanation generation of robot failures;"Pradip Pramanick; Silvia Rossi";2024;Moritz
+FNMPTYYT;Semantic-based explainable AI: Leveraging semantic scene graphs and pairwise ranking to explain robot failures;"Devleena Das; S. Chernova";2021;Moritz
+GXQT7PDU;A closer look at reward decomposition for high-level robotic explanations;"Wenhao Lu; S. Magg; Xufeng Zhao; M. Gromniak; Stefan Wermter";2023;Tobias
+QRTC7L73;Real-time counterfactual explanations for robotic systems with multiple continuous outputs;"V.B. Gjaerum; I. Strümke; A.M. Lekkas; T. Miller; H. Ishii; Y. Ebihara; J. Imura; M. Yamakita";2023;Andreas
+UEW55ITA;Explainable artificial intelligence for autonomous surface vessels by fuzzy-based collision avoidance system;"V. Singh; O.L. Osen; R.T. Bye; T. Senjyu; C. So–In; A. Joshi";2023;Andreas
+9UHS65IE;Architecting explainable service robots;"M.M. Bersani; M. Camilli; L. Lestingi; R. Mirandola; M. Rossi; P. Scandurra; B. Tekinerdogan; C. Trubiani; C. Tibermacine; P. Scandurra; C.E. Cuesta";2023;Andreas
+D3IAH7MG;Accountability and explainability in robotics: a proof of concept for ROS 2- and Nav2-based mobile robots;"L. Fernández-Becerra; M.A. González-Santamarta; D. Sobrin-Hidalgo; Á.M. Guerrero-Higueras; F.J.R. Lera; V.M. Matellán-Olivera; P. García Bringas; H. Pérez García; F.J. Martínez de Pisón; F. Martínez Álvarez; A. Troncoso Lora; A. Herrero; J.L. Calvo Rolle; H. Quintián; E. Corchado";2023;Andreas
+VAYQGAKC;A fast method for explanations of failures in optimization-based robot motion planning;"M. Eder; G. Steinbauer-Wagner; A. Müller; M. Brandstötter";2022;Amar
+2849SXHS;A generalizable architecture for explaining robot failures using behavior trees and large language models;"Christian Tagliamonte; Daniel Maccaline; Gregory LeMasurier; H. Yanco";2024;Moritz
+UIYQE7V7;Reinforcement Learning of an Interpretable Fuzzy System Through a Neural Fuzzy Actor-Critic Framework for Mobile Robot Control;"C.-F. Juang; Z.-B. You";2024;Tobias
+LCAWJG35;Explaining Anomalous Events in Flight Data of UAV With Deep Attention-Based Multi-Instance Learning;"J. Yang; D. Tang; J. Yu; J. Zhang; H. Liu";2024;Andreas
+HU35SZHX;An Explainable Data-Driven Optimization Method for Unmanned Autonomous System Performance Assessment;"H. Yi; H. Zhang; H. Wang; W. Wang; L. Jia; L. Feng; D. Wang";2024;Amar
+57LQAWFP;Explainable Hierarchical Imitation Learning for Robotic Drink Pouring;"D. Zhang; Q. Li; Y. Zheng; L. Wei; D. Zhang; Z. Zhang";2022;Andreas
+NUSXX3T3;Explaining autonomous drones: An XAI journey;"M. Stefik; M. Youngblood; P. Pirolli; C. Lebiere; R. Thomson; R. Price; L.D. Nelson; R. Krivacic; J. Le; K. Mitsopoulos";2021;Andreas
+CD6AUXQK;Self-explaining social robots: An explainable behavior generation architecture for human-robot interaction;"Sonja Stange; Teena Hassan; Florian Schröder; Jacqueline Konkol; S. Kopp";2022;Moritz
+UPKK5F4G;Interpretable Autonomous Flight Via Compact Visualizable Neural Circuit Policies;"P. Tylkin; T.-H. Wang; K. Palko; R. Allen; H.C. Siu; D. Wrafter; T. Seyde; A. Amini; D. Rus";2022;Tobias
+IA7D9GH2;Integrated Knowledge- Based Reasoning and Data-Driven Learning for Explainable Agency in Robotics;M. Sridharan;2024;Moritz
+YIQ7M7WK;Verbal explanations by collaborating robot teams;"A.K. Singh; N. Baranwal; K.-F. Richter; T. Hellström; S. Bensch";2021;Andreas
+T4YDQC6B;Explainability of deep reinforcement learning algorithms in robotic domains by using Layer-wise Relevance Propagation;"M. Taghian; S. Miwa; Y. Mitsuka; J. Günther; S. Golestan; O. Zaïane";2024;Andreas
+CB6RLGUB;Efficient and Interpretable Robot Manipulation with Graph Neural Networks;"Y. Lin; A.S. Wang; E. Undersander; A. Rai";2022;Andreas
+BPBV4QIT;Explainable autonomous robots in continuous state space based on graph-structured world model;"Site Hu; Takayuki Nagai";2023;Andreas
+H4QA43XT;Explainable Deep Reinforcement Learning for UAV autonomous path planning;"L. He; N. Aouf; B. Song";2021;Moritz
+PATULKY5;Building the foundation of robot explanation generation using behavior trees;"Zhao Han; Daniel Giger; Jordan Allspaw; Michael S. Lee; H. Admoni; H. Yanco";2021;Andreas
+LDSTQP7X;Model tree methods for explaining deep reinforcement learning agents in real-time robotic applications;"V.B. Gjaerum; I. Strümke; J. Løver; T. Miller; A.M. Lekkas";2023;Andreas
+KPIFEFAT;CE-MRS: Contrastive Explanations for Multi-Robot Systems;"E. Schneider; D. Wu; D. Das; S. Chernova";2024;Amar
+PDWQJ7B2;Transparency through Explanations and Justifications in Human-Robot Task-Based Communications;"M. Scheutz; R. Thielstrom; M. Abrams";2022;Moritz
+8TC4BUMX;Using large language models for interpreting autonomous robots behaviors;"Miguel Ángel González Santamarta; Laura Fernández-Becerra; David Sobrín-Hidalgo; Á. Guerrero-Higueras; Irene Gonz'alez; F. J. Rodríguez-Lera";2023;Moritz
+E6QZCX5R;A framework of explanation generation toward reliable autonomous robots;"Tatsuya Sakai; Miyazawa ,Kazuki; Horii ,Takato; Takayuki and Nagai";2021;Andreas
+PVAWJYPB;Why did I fail? A causal-based method to find explanations for robot failures;"Maximilian Diehl; Karinne Ramirez-Amaro";2022;Andreas
+SH73SS5J;A causal-based approach to explain, predict and prevent failures in robotic tasks;"M. Diehl; K. Ramirez-Amaro";2023;Amar
+W9ICSGKG;Transparent Interaction Based Learning for Human-Robot Collaboration;"E. Bagheri; J. de Winter; B. Vanderborght";2022;Moritz

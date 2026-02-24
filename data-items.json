@@ -1,0 +1,268 @@
+{
+    "General information":
+    {
+        "Code available?": [
+            "yes",
+            "no",
+            "single-choice"
+        ],
+        "Project status": [
+            "maintained",
+            "unmaintained",
+            "deprecated",
+            "single-choice"
+        ],
+        "License": [
+            "MIT",
+            "GPL",
+            "Apache",
+            "BSD",
+            "No commercial use",
+            "single-choice",
+            "Other"
+        ]
+    },
+    "Target platform (RQ1)": {
+        "Deployment": [
+            "Real robot",
+            "Robot simulation",
+            "Other simulation",
+            "Robot recording",
+            "Not applicable"
+        ],
+        "Robotic device": [
+            "Manipulator (unspecified) => Use if not further specified",
+            "Rectangular/cartesian robot",
+            "Cylindrical robot",
+            "Polar/spherical robot",  
+            "Pendular robot",
+            "Articulated robot", 
+            "SCARA robot",
+            "Parallel robot manipulator",
+            "Mobile robot (unspecified) => Use if not further specified",
+            "Wheeled robot",
+            "Legged robot",
+            "Biped robot",
+            "Crawler robot",
+            "Humanoid robot",
+            "Mobile platform",
+            "Wearable robot",
+            "Drone",
+            "Ship",
+            "Other",
+            "Not applicable => Use if there is no specific robot mentioned",
+            "Autonomous underwater vehicle",
+            "Mobile manipulator"
+        ],
+        "Simulation environment": [
+            "Gazebo",
+            "Webots",
+            "V-REP/CoppeliaSim",
+            "MORSE",
+            "MuJoCo",
+            "PyBullet",
+            "Unity",
+            "Unreal Engine",
+            "Not applicable",
+            "Other"
+        ],
+        "Domain": [
+            "Agriculture",
+            "Professional cleaning",
+            "Inspection and maintenance",
+            "Construction",
+            "Transportation and logistics",
+            "Medical and healthcare",
+            "Emergency response",
+            "Defense and security",
+            "Hospitality and entertainment",
+            "Industrial robot",
+            "Consumer robot",
+            "Other"
+        ],
+        "Use case": [
+            "Navigation",
+            "Manipulation",
+            "Collision avoidance",
+            "Inspection",
+            "Search and rescue",
+            "Other",
+            "Not applicable"
+        ],
+        "Location":[
+            "Laboratory",
+            "Field",
+            "Not applicable",
+            "In the wild"
+        ],
+        "Multi Agent System":[
+            "No, i.e. one human - one robot",
+            "One human - multiple robots",
+            "Multiple humans - one robot",
+            "Multiple humans - multiple robots"
+        ]
+    },
+    "Software characteristics (RQ2)": {
+        "Middleware": [
+            "ROS1",
+            "ROS2",
+            "YARP",
+            "LCM",
+            "Mo Middleware",
+            "Not applicable",
+            "Other"
+        ],
+        
+        "Control algorithm": [
+            "BT",
+            "BT (nav 2)",
+            "FSM",
+            "RL",
+            "HTN",
+            "PDDL",
+            "DL-Based",
+            "Cognitive architecture",
+            "MDP-based",
+            "BDI Agent",
+            "HMM",
+            "Decision tree",
+            "Other",
+            "Not applicable"
+
+        ],
+        "Adaptation": [
+            "Yes, autonomous adaptation",
+            "Yes, with user involvement",
+            "None",
+            "single-choice"
+        ],
+        "Goal of adaptation": [
+            "Self configuration",
+            "Self healing",
+            "Self protection",
+            "Continuous learning",
+            "Not applicable",
+            "Other"
+        ]
+    },
+    "Explanation structure (RQ3)": {
+        "Intrinsic vs. post-hoc": [
+            "Intrinsic",
+            "Post-hoc",
+            "Pre-hoc",
+            "single-choice"
+        ],
+        "Generation technique": [
+            "SHAP-based",
+            "LIME-based",
+            "Tree-based",
+            "MDP-based",
+            "FSM-based",
+            "DL-based",
+            "Rule-based",
+            "Template-based",
+            "LLM-based",
+            "Other"
+        ],
+        "Explained robot part": [
+            "Perception",
+            "Behaviour"
+        ],
+        "Planning level scope": [
+            "Action level",
+            "Sequence level",
+            "Goal level",
+            "Policy level"
+        ],
+        "Explanatory question": [
+            "Why",
+            "What",
+            "How"
+        ],
+        "Presentation modality": [
+            "Visualization",
+            "Logs",
+            "Expressive motion",
+            "Expressive lights",
+            "Speech",
+            "Text",
+            "Other"
+        ]
+    },
+    "Stakeholder (RQ4)": {
+        "HRI Type": [
+            "No coexistence",
+            "Coexistence",
+            "Cooperation",
+            "Collaboration",
+            "Human robot teaming",
+            "Human supervision"
+        ],
+        "Motivation": [
+            "Trust (unspecified)",
+            "Trust (increase)",
+            "Trust (calibration)",
+            "Collaboration",
+            "Intent communication",
+            "Control",
+            "Education",
+            "Accountability",
+            "Safety",
+            "Failure handling",
+            "Mental model alignment",
+            "Transparency",
+            "Debugging",
+            "User understanding"
+        ],
+        "Stakeholder type": {
+            "options": [
+                "Developer",
+                "Domain expert",
+                "Operator / End user (non-expert)",
+                "Manager",
+                "Robot / end effector manufacturer",
+                "Regulatory body",
+                "Tutor",
+                "Robot itself",
+                "Safety engineer",
+                "Ethicist",
+                "Bystander",
+                "Other"
+            ],
+            "toggle_option": {
+                "enabled": true,
+                "label": "Interpreted by us"
+            }
+        }
+    },
+    "Evaluation (RQ5)": {
+        "State of explainability": [
+            "Pseudo-code",
+            "Implementation",
+            "Evaluated",
+            "single-choice"
+        ],
+        "Type of evaluation": [
+            "None",
+            "Technical (Benchmark), Quantitative",
+            "Technical (Benchmark), Qualitative",
+            "Technical, Mixed methods",
+            "User study, Quantitative",
+            "User study, Qualitative",
+            "User study, Mixed methods",
+            "Multiple"
+        ],
+        "Evaluation metrics": [
+            "Trust",
+            "Competence",
+            "Usability",
+            "Understandability",
+            "Satisfaction",
+            "Cognitive load",
+            "User behavior (performance)",
+            "Accuracy of the explanation",
+            "Curiosity",
+            "Other"
+        ]
+    }
+}
