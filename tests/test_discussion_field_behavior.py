@@ -3,6 +3,7 @@ import importlib.util
 import json
 import os
 import pathlib
+import sys
 import tempfile
 import unittest
 from contextlib import contextmanager
@@ -13,7 +14,11 @@ from PyQt6.QtWidgets import QApplication
 
 
 def _load_gui_module():
-    module_path = pathlib.Path(__file__).resolve().parents[1] / "data-extraction-gui.py"
+    workspace_root = pathlib.Path(__file__).resolve().parents[1]
+    if str(workspace_root) not in sys.path:
+        sys.path.insert(0, str(workspace_root))
+
+    module_path = workspace_root / "data-extraction-gui.py"
     spec = importlib.util.spec_from_file_location("data_extraction_gui", module_path)
     if spec is None or spec.loader is None:
         raise RuntimeError("Could not load data-extraction-gui.py")
