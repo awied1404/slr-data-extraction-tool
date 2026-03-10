@@ -14,7 +14,7 @@ def _load_data_items() -> dict:
 def test_type_of_evaluation_contains_multiple_marker() -> None:
     data = _load_data_items()
     evaluation_section = data.get("Evaluation (RQ5)", {})
-    type_of_evaluation = evaluation_section.get("Type of evaluation", [])
+    type_of_evaluation = evaluation_section.get("Type of explainability evaluation", [])
 
     assert isinstance(type_of_evaluation, list)
     assert "Multiple" in type_of_evaluation
