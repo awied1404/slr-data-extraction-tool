@@ -85,6 +85,19 @@ KPIFEFAT;CE-MRS: Contrastive Explanations for Multi-Robot Systems;"E. Schneider;
 PDWQJ7B2;Transparency through Explanations and Justifications in Human-Robot Task-Based Communications;"M. Scheutz; R. Thielstrom; M. Abrams";2022;Moritz
 8TC4BUMX;Using large language models for interpreting autonomous robots behaviors;"Miguel Ángel González Santamarta; Laura Fernández-Becerra; David Sobrín-Hidalgo; Á. Guerrero-Higueras; Irene Gonz'alez; F. J. Rodríguez-Lera";2023;Moritz
 E6QZCX5R;A framework of explanation generation toward reliable autonomous robots;"Tatsuya Sakai; Miyazawa ,Kazuki; Horii ,Takato; Takayuki and Nagai";2021;Andreas
-PVAWJYPB;Why did I fail? A causal-based method to find explanations for robot failures;"Maximilian Diehl; Karinne Ramirez-Amaro";2022;Andreas
+PVAWJYPB;Why did I fail? A causal-based method to find explanations for robot failures;"Maximilian Diehl; Karinne Ramirez-Amaro";2022;Shu
 SH73SS5J;A causal-based approach to explain, predict and prevent failures in robotic tasks;"M. Diehl; K. Ramirez-Amaro";2023;Amar
 W9ICSGKG;Transparent Interaction Based Learning for Human-Robot Collaboration;"E. Bagheri; J. de Winter; B. Vanderborght";2022;Moritz
+3945CSYE;Excuse my explanations: Integrating excuses and model reconciliation for actionable explanations;"Turgay Caglar; Zahra Zahedi; Sarath Sreedharan";2025;Shu
+3QH96RM8;Efficient self-adaptation through explanation-driven white-box optimization;"Francesco Negri; Niccolò Nicolosi; Matteo Camilli; Raffaela Mirandola";2025;Andreas
+4MX7R7CS;BaTCAVe: Trustworthy explanations for robot behaviors;"Som Sagar; Aditya Taparia; Harsh Mankodiya; Pranav Bidare; Yifan Zhou; Ransalu Senanayake";2025;Shu
+6DF6ZAPQ;Explaining autonomous navigation to human-in-the-loop operator in multi-task rotorcraft search & rescue operations;"Nathaniel Amadi; Samuel Cartwright; Noe Claudel; Jamal Mohammed; Kenechukwu Agbo; Paris Chatzithanos; Mariusz Wisniewski; Antonios Tsourdos; Yang Xing; Weisi Guo";2025;Shu
+8GTN2MBR;Generating legible and glanceable swarm robot motion through trajectory, collective behavior, and pre-attentive processing features;"Lawrence H. Kim; Sean Follmer";2021;Shu
+9HQUNBL2;TRUST-x: Real-time explainable decision-making framework for reinforcement learning-based UAV control;"Hanzala Akbar; Inayat Arshad; Satwat Rahman; Fatima Aamir; Marrium Fatima; Haroon Ur Rashid Khan";2025;Shu
+AZJWXGV3;Neuro-symbolic generation of explanations for robot policies with weighted signal temporal logic;"Mikihisa Yuasa; Ramavarapu S. Sreenivas; Huy T. Tran";2026;Stina
+D2DM7ND3;Robot, did you read my mind? Modelling human mental states to facilitate transparency and mitigate false beliefs in human–robot collaboration;"Georgios Angelopoulos; Mehdi Hellou; Samuele Vinanzi; Alessandra Rossi; Silvia Rossi; Angelo Cangelosi";2025;Stina
+ERD3QIFC;Explainable reward shaping via SHAP for double-DQN in UAV-assisted wsns;"Ali Alfayly; Nadine Abbas";2026;Stina
+QJPSEAPG;Who am I dealing with? Explaining the designer's hidden intentions;"Turgay Caglar; Sarath Sreedharan; Mor Vered";2025;Stina
+QW5V7YWE;Integrating Explainable AI with Human-in-the-Loop Systems for Transparent Decision-Making in Autonomous Robots;"Vijaya Kumbhar; G. Sireesha; Varsha. D. Jadhav; Amit Barve; Rahul Sharma; Manzoore Elahi. M. Soudagar";2025;Stina
+SAVNZAMC;SplineFormer: An explainable transformer network for autonomous endovascular navigation;"Tudor Jianu; Shayan Doust; Mengyun Li; Baoru Huang; Tuong Do; Hoan Nguyen; Karl Bates; Tung D. Ta; Sebastiano Fichera; Pierre Berthet-Rayne; Anh Nguyen";2025;Stina
+TMRYCZHY;Realistic Counterfactual Explanations for Machine Learning-Controlled Mobile Robots using 2D LiDAR;"Sindre Benjamin Remman; Anastasios M. Lekkas";2025;Stina
