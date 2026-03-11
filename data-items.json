@@ -58,7 +58,8 @@
             "Other",
             "Not applicable => Use if there is no specific robot mentioned",
             "Autonomous underwater vehicle",
-            "Mobile manipulator"
+            "Mobile manipulator",
+            "Multiple"
         ],
         "Simulation environment": [
             "Gazebo",
@@ -70,7 +71,8 @@
             "Unity",
             "Unreal Engine",
             "Not applicable",
-            "Other"
+            "Other",
+            "Multiple"
         ],
         "Domain": [
             "Agriculture",
@@ -84,7 +86,8 @@
             "Hospitality and entertainment",
             "Industrial robot",
             "Consumer robot",
-            "Other"
+            "Other",
+            "Multiple"
         ],
         "Use case": [
             "Navigation",
@@ -132,7 +135,8 @@
             "HMM",
             "Decision tree",
             "Other",
-            "Not applicable"
+            "Not applicable",
+            "Multiple"
         ],
         "Adaptation": [
             "Yes, autonomous adaptation",
@@ -225,7 +229,8 @@
             "Mental model alignment",
             "Transparency",
             "Debugging",
-            "User understanding"
+            "User understanding",
+            "Multiple"
         ],
         "Stakeholder type": {
             "options": [
@@ -240,7 +245,8 @@
                 "Safety engineer",
                 "Ethicist",
                 "Bystander",
-                "Other"
+                "Other",
+                "Multiple"
             ],
             "toggle_option": {
                 "enabled": true,
@@ -276,7 +282,8 @@
             "Accuracy of the explanation",
             "Curiosity",
             "Not applicable",
-            "Other"
+            "Other",
+            "Multiple"
         ]
     }
 }

@@ -1249,6 +1249,9 @@ class DataExtractionGUI(QMainWindow):
                         self.selected_Other_text[entry_key][question_key][attribute]
                     )
                     self.text_inputs[text_input_key].setEnabled(True)
+                    self.text_inputs[text_input_key].setStyleSheet(
+                        "QLineEdit { background-color: white; border: 1px solid #4CAF50; border-radius: 3px; padding: 5px; color: #333333; }"
+                    )
 
             # Restore "Discussion needed" text if present
             if "Discussion needed" in selections:
@@ -1482,6 +1485,15 @@ class DataExtractionGUI(QMainWindow):
                 entry_key, question_key, attribute, True, clear_text=False
             )
 
+        # Enable text input if "Other" was selected
+        if selected_text == "Other":
+            text_input_key = f"{entry_key}_{question_key}_{attribute}_Other"
+            if text_input_key in self.text_inputs:
+                self.text_inputs[text_input_key].setEnabled(True)
+                self.text_inputs[text_input_key].setStyleSheet(
+                    "QLineEdit { background-color: white; border: 1px solid #4CAF50; border-radius: 3px; padding: 5px; color: #333333; }"
+                )
+
         # Update the UI to show selected values
         self._update_multiple_selection_display(entry_key, question_key, attribute)
 
@@ -1602,6 +1614,16 @@ class DataExtractionGUI(QMainWindow):
                 self._set_discussion_field_state(
                     entry_key, question_key, attribute, False, clear_text=True
                 )
+
+            if value == "Other":
+                text_input_key = f"{entry_key}_{question_key}_{attribute}_Other"
+                if text_input_key in self.text_inputs:
+                    self.text_inputs[text_input_key].setEnabled(False)
+                    self.text_inputs[text_input_key].setStyleSheet(
+                        "QLineEdit { background-color: #f5f5f5; border: 1px solid #d0d0d0; border-radius: 3px; padding: 5px; color: #999999; }"
+                    )
+                    self.text_inputs[text_input_key].clear()
+                    self.selected_Other_text[entry_key][question_key][attribute] = ""
 
             self._update_multiple_selection_display(entry_key, question_key, attribute)
 
