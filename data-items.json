@@ -58,7 +58,8 @@
             "Other",
             "Not applicable => Use if there is no specific robot mentioned",
             "Autonomous underwater vehicle",
-            "Mobile manipulator"
+            "Mobile manipulator",
+            "Multiple"
         ],
         "Simulation environment": [
             "Gazebo",
@@ -225,7 +226,8 @@
             "Mental model alignment",
             "Transparency",
             "Debugging",
-            "User understanding"
+            "User understanding",
+            "Multiple"
         ],
         "Stakeholder type": {
             "options": [
@@ -276,7 +278,8 @@
             "Accuracy of the explanation",
             "Curiosity",
             "Not applicable",
-            "Other"
+            "Other",
+            "Multiple"
         ]
     }
 }
