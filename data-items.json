@@ -157,8 +157,7 @@
         "Intrinsic vs. post-hoc": [
             "Intrinsic",
             "Post-hoc",
-            "Pre-hoc",
-            "single-choice"
+            "Pre-hoc"
         ],
         "Generation technique": [
             "SHAP-based",
