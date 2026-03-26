@@ -51,14 +51,14 @@ class PaperSelectionDialog(QDialog):
 
     def __init__(
         self,
-        finished_papers: List[Tuple[str, str, str, str, bool, bool]],
+        finished_papers: List[Tuple[str, str, str, str, bool, bool, bool]],
         parent=None,
     ) -> None:
         """Initialize the Paper Selection Dialog.
 
         Args:
-            finished_papers (List[Tuple[str, str, str, str, bool, bool]]):
-                List of tuples (paper_key, title, authors, year, has_open_discussion, has_open_other)
+            finished_papers (List[Tuple[str, str, str, str, bool, bool, bool]]):
+                List of tuples (paper_key, title, authors, year, has_open_discussion, has_open_other, is_excluded)
                 for completed papers.
             parent: The parent widget.
         """
@@ -85,7 +85,15 @@ class PaperSelectionDialog(QDialog):
         self.paper_list = QListWidget()
         self.paper_list.setSelectionMode(QListWidget.SelectionMode.SingleSelection)
 
-        for paper_key, title, authors, year, has_open_discussion, has_open_other in self.finished_papers:
+        for (
+            paper_key,
+            title,
+            authors,
+            year,
+            has_open_discussion,
+            has_open_other,
+            is_excluded,
+        ) in self.finished_papers:
             item = QListWidgetItem()
             item.setData(
                 Qt.ItemDataRole.UserRole, paper_key
@@ -99,6 +107,7 @@ class PaperSelectionDialog(QDialog):
                 paper_key=paper_key,
                 has_open_discussion=has_open_discussion,
                 has_open_other=has_open_other,
+                is_excluded=is_excluded,
             )
             item.setSizeHint(paper_widget.sizeHint())
             self.paper_list.setItemWidget(item, paper_widget)
@@ -128,6 +137,7 @@ class PaperSelectionDialog(QDialog):
         paper_key: str,
         has_open_discussion: bool,
         has_open_other: bool,
+        is_excluded: bool,
     ) -> QWidget:
         """Build a list item widget with status tags and paper metadata."""
         container = QWidget()
@@ -155,7 +165,7 @@ class PaperSelectionDialog(QDialog):
             discussion_tag.setFixedSize(90, 20)
             discussion_tag.setAlignment(Qt.AlignmentFlag.AlignCenter)
             discussion_tag.setStyleSheet(
-                "QLabel { background-color: #d9534f; color: white; border-radius: 8px; padding: 1px 6px; font-size: 9pt; font-weight: bold; }"
+                "QLabel { background-color: #f0ad4e; color: white; border-radius: 8px; padding: 1px 6px; font-size: 9pt; font-weight: bold; }"
             )
             tags_row.addWidget(discussion_tag)
 
@@ -167,6 +177,15 @@ class PaperSelectionDialog(QDialog):
                 "QLabel { background-color: #1f77d0; color: white; border-radius: 8px; padding: 1px 6px; font-size: 9pt; font-weight: bold; }"
             )
             tags_row.addWidget(other_tag)
+
+        if is_excluded:
+            excluded_tag = QLabel("excluded")
+            excluded_tag.setFixedSize(90, 20)
+            excluded_tag.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            excluded_tag.setStyleSheet(
+                "QLabel { background-color: #d9534f; color: white; border-radius: 8px; padding: 1px 6px; font-size: 9pt; font-weight: bold; }"
+            )
+            tags_row.addWidget(excluded_tag)
 
         tags_row.addStretch()
         container_layout.addLayout(tags_row)
@@ -431,12 +450,12 @@ class DataExtractionGUI(QMainWindow):
         # All papers have been processed, return last index to trigger completion
         return len(self.paper_keys)
 
-    def get_finished_papers(self) -> List[Tuple[str, str, str, str, bool, bool]]:
+    def get_finished_papers(self) -> List[Tuple[str, str, str, str, bool, bool, bool]]:
         """Get list of papers that have been finished (have responses in export file).
 
         Returns:
-            List[Tuple[str, str, str, str, bool, bool]]: List of tuples
-            (paper_key, title, authors, year, has_open_discussion, has_open_other)
+            List[Tuple[str, str, str, str, bool, bool, bool]]: List of tuples
+            (paper_key, title, authors, year, has_open_discussion, has_open_other, is_excluded)
             for finished papers.
         """
         finished = []
@@ -499,6 +518,7 @@ class DataExtractionGUI(QMainWindow):
             # Add to finished list if it has responses
             if has_responses or paper_data.get("excluded_from_full_text_review", False):
                 entry_data = self.papers.get(paper_key, {})
+                is_excluded = paper_data.get("excluded_from_full_text_review", False)
                 finished.append(
                     (
                         paper_key,
@@ -507,6 +527,7 @@ class DataExtractionGUI(QMainWindow):
                         entry_data.get("year", "Unknown"),
                         has_open_discussion,
                         has_open_other,
+                        is_excluded,
                     )
                 )
 
@@ -696,6 +717,21 @@ class DataExtractionGUI(QMainWindow):
         entry_key = self.paper_keys[index]
         entry_data = self.papers[entry_key]
 
+        # Ensure per-paper tracking dictionaries exist before restoring persisted state.
+        if entry_key not in self.selected_values:
+            self.selected_values[entry_key] = {}
+        if entry_key not in self.selected_Other_text:
+            self.selected_Other_text[entry_key] = {}
+        if entry_key not in self.toggle_states:
+            self.toggle_states[entry_key] = {}
+        if entry_key not in self.toggle_texts:
+            self.toggle_texts[entry_key] = {}
+        if entry_key not in self.mandatory_texts:
+            self.mandatory_texts[entry_key] = {}
+
+        # Refresh persisted state on every load so revisiting finished papers reflects export.json.
+        self._load_paper_progress(entry_key)
+
         paper_title = entry_data.get("title", "Unknown")
         paper_authors = entry_data.get("authors", "Unknown")
         paper_year = entry_data.get("year", "Unknown")
@@ -747,14 +783,6 @@ class DataExtractionGUI(QMainWindow):
         self.toggle_buttons.clear()
         self.toggle_line_edits.clear()
         self.mandatory_text_inputs.clear()
-
-        # Initialize tracking for this paper if not already done
-        if entry_key not in self.selected_values:
-            self.selected_values[entry_key] = {}
-            self.selected_Other_text[entry_key] = {}
-            self.toggle_states[entry_key] = {}
-            # Load previous progress from export file
-            self._load_paper_progress(entry_key)
 
         # Create nested tabs for research questions
         if self.question_tabs is not None:
