@@ -717,7 +717,8 @@ class DataExtractionGUI(QMainWindow):
         entry_key = self.paper_keys[index]
         entry_data = self.papers[entry_key]
 
-        # Ensure per-paper tracking dictionaries exist before restoring persisted state.
+        # Ensure per-paper tracking dictionaries exist for new papers.
+        # _load_paper_progress will reset them if saved data exists in export.json.
         if entry_key not in self.selected_values:
             self.selected_values[entry_key] = {}
         if entry_key not in self.selected_Other_text:
@@ -819,6 +820,13 @@ class DataExtractionGUI(QMainWindow):
             return
 
         paper_data = exported_data[entry_key]
+
+        # Paper exists in export.json — reset in-memory selections so we never append to stale data.
+        self.selected_values[entry_key] = {}
+        self.selected_Other_text[entry_key] = {}
+        self.toggle_states[entry_key] = {}
+        self.toggle_texts[entry_key] = {}
+        self.mandatory_texts[entry_key] = {}
 
         # Restore exclusion status
         self.excluded_papers[entry_key] = paper_data.get(
