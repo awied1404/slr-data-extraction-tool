@@ -174,6 +174,41 @@ class TestDiscussionFieldBehavior(unittest.TestCase):
                 finally:
                     window.close()
 
+    def test_excluded_paper_state_restores_when_reopened(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = pathlib.Path(tmpdir)
+            with _working_directory(root):
+                window = self._create_window(root)
+                try:
+                    export_path = root / "export.json"
+                    export_payload = {
+                        "P1": {
+                            "paper": {
+                                "title": "Paper 1",
+                                "authors": "Author A",
+                                "year": "2024",
+                            },
+                            "excluded_from_full_text_review": True,
+                            "exclusion_reason": "Out of scope",
+                            "responses": {},
+                        }
+                    }
+
+                    with export_path.open("w", encoding="utf-8") as f:
+                        json.dump(export_payload, f)
+
+                    window.load_paper(1)
+                    window.load_paper(0)
+
+                    self.assertIsNotNone(window.exclude_checkbox)
+                    self.assertTrue(window.exclude_checkbox.isChecked())
+                    self.assertIsNotNone(window.exclude_reason_input)
+                    self.assertTrue(window.exclude_reason_input.isEnabled())
+                    self.assertEqual(window.exclude_reason_input.text(), "Out of scope")
+                    self.assertFalse(window.question_tabs.isEnabled())
+                finally:
+                    window.close()
+
 
 if __name__ == "__main__":
     unittest.main()
