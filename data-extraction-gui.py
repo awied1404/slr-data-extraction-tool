@@ -85,7 +85,7 @@ class PaperSelectionDialog(QDialog):
         self.paper_list = QListWidget()
         self.paper_list.setSelectionMode(QListWidget.SelectionMode.SingleSelection)
 
-        for (
+        for i, (
             paper_key,
             title,
             authors,
@@ -93,7 +93,7 @@ class PaperSelectionDialog(QDialog):
             has_open_discussion,
             has_open_other,
             is_excluded,
-        ) in self.finished_papers:
+        ) in enumerate(self.finished_papers, start=1):
             item = QListWidgetItem()
             item.setData(
                 Qt.ItemDataRole.UserRole, paper_key
@@ -101,6 +101,7 @@ class PaperSelectionDialog(QDialog):
             self.paper_list.addItem(item)
 
             paper_widget = self._create_paper_item_widget(
+                index=i,
                 title=title,
                 authors=authors,
                 year=year,
@@ -131,6 +132,7 @@ class PaperSelectionDialog(QDialog):
 
     def _create_paper_item_widget(
         self,
+        index: int,
         title: str,
         authors: str,
         year: str,
@@ -145,7 +147,7 @@ class PaperSelectionDialog(QDialog):
         container_layout.setContentsMargins(8, 6, 8, 6)
         container_layout.setSpacing(4)
 
-        title_label = QLabel(title)
+        title_label = QLabel(f"{index}. {title}")
         title_label.setStyleSheet("QLabel { color: #1a1a1a; font-weight: bold; }")
         title_label.setWordWrap(True)
         container_layout.addWidget(title_label)
