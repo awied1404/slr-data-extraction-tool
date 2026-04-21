@@ -126,5 +126,37 @@
       "must_equal": "Not applicable"
     },
     "message": "If use case is 'Not applicable', the location must be 'Not applicable'."
+  },
+  {
+    "id": "technical_benchmark_quantitative_requires_technical_metrics",
+    "when": {
+      "source": "response",
+      "question": "Evaluation (RQ5)",
+      "attribute": "Type of explainability evaluation",
+      "equals": "Technical (Benchmark), Quantitative"
+    },
+    "then": {
+      "source": "response",
+      "question": "Evaluation (RQ5)",
+      "attribute": "Technical Evaluation Metrics",
+      "must_not_equal": "Not applicable"
+    },
+    "message": "If type of evaluation is 'Technical (Benchmark), Quantitative', the technical evaluation metrics must not be 'Not applicable'."
+  },
+  {
+    "id": "technical_benchmark_qualitative_requires_technical_metrics",
+    "when": {
+      "source": "response",
+      "question": "Evaluation (RQ5)",
+      "attribute": "Type of explainability evaluation",
+      "equals": "Technical (Benchmark), Qualitative"
+    },
+    "then": {
+      "source": "response",
+      "question": "Evaluation (RQ5)",
+      "attribute": "Technical Evaluation Metrics",
+      "must_not_equal": "Not applicable"
+    },
+    "message": "If type of evaluation is 'Technical (Benchmark), Qualitative', the technical evaluation metrics must not be 'Not applicable'."
   }
 ]
