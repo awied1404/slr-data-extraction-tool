@@ -767,7 +767,7 @@ class DataExtractionGUI(QMainWindow):
         paper_year = entry_data.get("year", "Unknown")
 
         # Update paper info label
-        info_text = f"Title: {paper_title}\nAuthors: {paper_authors}\nYear: {paper_year}\nUser: {self.user}"
+        info_text = f"Title: {paper_title}\nAuthors: {paper_authors}\nYear: {paper_year}\nKey: {entry_key}\nUser: {self.user}"
         self.paper_info_label.setText(info_text)
 
         # Update exclude checkbox state
