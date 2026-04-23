@@ -101,6 +101,7 @@
             "Hospitality and entertainment",
             "Industrial robot",
             "Consumer robot",
+            "Off road field exploration",
             "Other",
             "Multiple"
         ],
@@ -130,8 +131,10 @@
         "Middleware": [
             "ROS1",
             "ROS2",
+            "ROS (unspecified)",
             "YARP",
             "LCM",
+            "General-Purpose Communication Protocols",
             "Mo Middleware",
             "Not applicable",
             "Other"
