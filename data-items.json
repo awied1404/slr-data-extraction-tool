@@ -111,6 +111,9 @@
             "Collision avoidance",
             "Inspection",
             "Search and rescue",
+            "Locomotion",
+            "Failure handling",
+            "Other interaction",
             "Other",
             "Not applicable"
         ],
