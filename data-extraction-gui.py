@@ -81,6 +81,16 @@ class PaperSelectionDialog(QDialog):
         title_label.setFont(title_font)
         layout.addWidget(title_label)
 
+        # Search field for item key
+        search_layout = QHBoxLayout()
+        search_label = QLabel("Search by key:")
+        search_layout.addWidget(search_label)
+        self.search_input = QLineEdit()
+        self.search_input.setPlaceholderText("Filter by item key...")
+        self.search_input.textChanged.connect(self._filter_papers)
+        search_layout.addWidget(self.search_input)
+        layout.addLayout(search_layout)
+
         # Create list widget for finished papers
         self.paper_list = QListWidget()
         self.paper_list.setSelectionMode(QListWidget.SelectionMode.SingleSelection)
@@ -202,6 +212,15 @@ class PaperSelectionDialog(QDialog):
 
         container.setLayout(container_layout)
         return container
+
+    def _filter_papers(self, text: str) -> None:
+        """Show/hide list items based on item key search text."""
+        query = text.strip().lower()
+        for i in range(self.paper_list.count()):
+            item = self.paper_list.item(i)
+            if item is not None:
+                paper_key = item.data(Qt.ItemDataRole.UserRole) or ""
+                item.setHidden(query not in paper_key.lower())
 
     def on_select(self) -> None:
         """Handle selection button click."""
