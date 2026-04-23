@@ -17,6 +17,7 @@
             "GPL",
             "Apache",
             "BSD",
+            "CC",
             "No commercial use",
             "single-choice",
             "Other",
@@ -162,13 +163,26 @@
         "Generation technique": [
             "SHAP-based",
             "LIME-based",
+            "Gradient-based",
+            "LRP",
+            "Perturbation",
             "Tree-based",
             "MDP-based",
             "FSM-based",
             "DL-based",
+            "RL-based",
+            "ML-based",
+            "VLM-based",
             "Rule-based",
             "Template-based",
+            "Bayesian Networks",
+            "Partial Dependency Plot",
+            "Counterfactual",
+            "Concept-based explanation",
+            "Neighborhood-based",
             "LLM-based",
+            "NLG underspecified",
+            "Genetic Algorithm",
             "Other",
             "Multiple"
         ],
@@ -283,6 +297,15 @@
             "Curiosity",
             "Not applicable",
             "Other",
+            "Multiple"
+        ],
+        "Technical Evaluation Metrics": [
+            "Cost & Efficiency",
+            "Fidelity",
+            "Desired Subjective Properties",
+            "Surrogate model comparison",
+            "Other",
+            "Not applicable",
             "Multiple"
         ]
     }
