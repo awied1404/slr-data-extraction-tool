@@ -512,8 +512,8 @@ class DataExtractionGUI(QMainWindow):
             # Detect whether this paper has at least one open discussion entry
             has_open_discussion = False
             has_open_other = False
-            for question_responses in responses.values():
-                for selection_list in question_responses.values():
+            for question_key, question_responses in responses.items():
+                for attribute, selection_list in question_responses.items():
                     if any(
                         isinstance(selection, str)
                         and (
@@ -524,12 +524,20 @@ class DataExtractionGUI(QMainWindow):
                     ):
                         has_open_discussion = True
 
-                    if any(
-                        isinstance(selection, str)
-                        and (selection == "Other" or selection.startswith("Other: "))
-                        for selection in selection_list
+                    # Ignore General information -> Additional information "Other" entries
+                    # for the dialog's "other" status tag.
+                    if not (
+                        question_key == "General information"
+                        and attribute == "Additional information"
                     ):
-                        has_open_other = True
+                        if any(
+                            isinstance(selection, str)
+                            and (
+                                selection == "Other" or selection.startswith("Other: ")
+                            )
+                            for selection in selection_list
+                        ):
+                            has_open_other = True
 
                     if has_open_discussion and has_open_other:
                         break
