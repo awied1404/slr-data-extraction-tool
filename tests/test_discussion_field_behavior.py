@@ -209,6 +209,104 @@ class TestDiscussionFieldBehavior(unittest.TestCase):
                 finally:
                     window.close()
 
+    def test_other_tag_ignores_general_info_additional_information(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = pathlib.Path(tmpdir)
+            data_items_path = root / "data-items.json"
+            csv_path = root / "assignments.csv"
+            export_path = root / "export.json"
+
+            data_items = {
+                "General information": {
+                    "Additional information": [
+                        "No additional information",
+                        "Other",
+                        "single-choice",
+                    ]
+                },
+                "RQ1": {"Category": ["Option A", "Other"]},
+            }
+
+            with data_items_path.open("w", encoding="utf-8") as f:
+                json.dump(data_items, f)
+
+            with csv_path.open("w", encoding="utf-8", newline="") as f:
+                writer = csv.DictWriter(
+                    f,
+                    fieldnames=["itemkey", "title", "author", "year", "assignee"],
+                    delimiter=";",
+                )
+                writer.writeheader()
+                writer.writerow(
+                    {
+                        "itemkey": "P1",
+                        "title": "Paper 1",
+                        "author": "Author A",
+                        "year": "2024",
+                        "assignee": "Moritz",
+                    }
+                )
+                writer.writerow(
+                    {
+                        "itemkey": "P2",
+                        "title": "Paper 2",
+                        "author": "Author B",
+                        "year": "2025",
+                        "assignee": "Moritz",
+                    }
+                )
+                writer.writerow(
+                    {
+                        "itemkey": "P3",
+                        "title": "Paper 3",
+                        "author": "Author C",
+                        "year": "2026",
+                        "assignee": "Moritz",
+                    }
+                )
+
+            export_payload = {
+                "P1": {
+                    "paper": {
+                        "title": "Paper 1",
+                        "authors": "Author A",
+                        "year": "2024",
+                    },
+                    "excluded_from_full_text_review": False,
+                    "responses": {
+                        "General information": {"Additional information": ["Other"]}
+                    },
+                },
+                "P2": {
+                    "paper": {
+                        "title": "Paper 2",
+                        "authors": "Author B",
+                        "year": "2025",
+                    },
+                    "excluded_from_full_text_review": False,
+                    "responses": {"RQ1": {"Category": ["Other"]}},
+                },
+            }
+            with export_path.open("w", encoding="utf-8") as f:
+                json.dump(export_payload, f)
+
+            with _working_directory(root):
+                window = self.gui_module.DataExtractionGUI(
+                    user="Moritz",
+                    json_file=str(data_items_path),
+                    csv_file=str(csv_path),
+                )
+                try:
+                    finished = window.get_finished_papers()
+                    finished_by_key = {row[0]: row for row in finished}
+
+                    self.assertIn("P1", finished_by_key)
+                    self.assertIn("P2", finished_by_key)
+                    self.assertFalse(finished_by_key["P1"][5])
+                    self.assertTrue(finished_by_key["P2"][5])
+                finally:
+                    window.close()
+
 
 if __name__ == "__main__":
     unittest.main()

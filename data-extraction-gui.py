@@ -81,6 +81,16 @@ class PaperSelectionDialog(QDialog):
         title_label.setFont(title_font)
         layout.addWidget(title_label)
 
+        # Search field for item key
+        search_layout = QHBoxLayout()
+        search_label = QLabel("Search by key:")
+        search_layout.addWidget(search_label)
+        self.search_input = QLineEdit()
+        self.search_input.setPlaceholderText("Filter by item key...")
+        self.search_input.textChanged.connect(self._filter_papers)
+        search_layout.addWidget(self.search_input)
+        layout.addLayout(search_layout)
+
         # Create list widget for finished papers
         self.paper_list = QListWidget()
         self.paper_list.setSelectionMode(QListWidget.SelectionMode.SingleSelection)
@@ -202,6 +212,15 @@ class PaperSelectionDialog(QDialog):
 
         container.setLayout(container_layout)
         return container
+
+    def _filter_papers(self, text: str) -> None:
+        """Show/hide list items based on item key search text."""
+        query = text.strip().lower()
+        for i in range(self.paper_list.count()):
+            item = self.paper_list.item(i)
+            if item is not None:
+                paper_key = item.data(Qt.ItemDataRole.UserRole) or ""
+                item.setHidden(query not in paper_key.lower())
 
     def on_select(self) -> None:
         """Handle selection button click."""
@@ -493,8 +512,8 @@ class DataExtractionGUI(QMainWindow):
             # Detect whether this paper has at least one open discussion entry
             has_open_discussion = False
             has_open_other = False
-            for question_responses in responses.values():
-                for selection_list in question_responses.values():
+            for question_key, question_responses in responses.items():
+                for attribute, selection_list in question_responses.items():
                     if any(
                         isinstance(selection, str)
                         and (
@@ -505,12 +524,20 @@ class DataExtractionGUI(QMainWindow):
                     ):
                         has_open_discussion = True
 
-                    if any(
-                        isinstance(selection, str)
-                        and (selection == "Other" or selection.startswith("Other: "))
-                        for selection in selection_list
+                    # Ignore General information -> Additional information "Other" entries
+                    # for the dialog's "other" status tag.
+                    if not (
+                        question_key == "General information"
+                        and attribute == "Additional information"
                     ):
-                        has_open_other = True
+                        if any(
+                            isinstance(selection, str)
+                            and (
+                                selection == "Other" or selection.startswith("Other: ")
+                            )
+                            for selection in selection_list
+                        ):
+                            has_open_other = True
 
                     if has_open_discussion and has_open_other:
                         break
@@ -740,7 +767,7 @@ class DataExtractionGUI(QMainWindow):
         paper_year = entry_data.get("year", "Unknown")
 
         # Update paper info label
-        info_text = f"Title: {paper_title}\nAuthors: {paper_authors}\nYear: {paper_year}\nUser: {self.user}"
+        info_text = f"Title: {paper_title}\nAuthors: {paper_authors}\nYear: {paper_year}\nKey: {entry_key}\nUser: {self.user}"
         self.paper_info_label.setText(info_text)
 
         # Update exclude checkbox state
